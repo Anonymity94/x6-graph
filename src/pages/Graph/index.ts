@@ -11,11 +11,22 @@ import './shape';
 
 import styles from './style.less';
 
+enum EMode {
+  'netword' = 'netword',
+  'service' = 'service',
+}
+
 Graph.registerEdgeTool('tooltip', TooltipTool, true);
 
 export default class FlowGraph {
   public static graph: Graph;
   private static stencil: Addon.Stencil;
+
+  /**
+   * 是否在编辑中
+   */
+  public static isEditting: boolean = false;
+  public static mode: EMode = EMode.netword;
 
   public static init() {
     this.graph = new Graph({
@@ -251,15 +262,16 @@ export default class FlowGraph {
    */
   private static initEdgeLabel() {
     const edges = this.graph.getEdges();
-    console.log(edges);
     edges.forEach((edge, index) => {
-      console.log(edge);
       const networkId: string = edge.prop('networkId');
-      console.log(networkId);
       // TODO: 根据网络ID拉取网络的统计信息
       // @see: https://x6.antv.vision/zh/docs/tutorial/intermediate/edge-labels/#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%87%E7%AD%BE
       if (networkId) {
-        edge.setLabels([networkId]);
+        edge.setLabels([]);
+        // TODO: 调整标签的位置和样式
+        edge.insertLabel(`${networkId}
+        峰值带宽：948Mbps
+        峰值并发会话：23948`);
       }
     });
   }
