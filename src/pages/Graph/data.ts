@@ -6,13 +6,23 @@ const graphData = {
       id: 'a09a983a-5901-4399-a574-60e9780aaa2f',
       router: { name: 'manhattan' },
       zIndex: 0,
+      networkId: 'networkId-1',
+      labels: [
+        {
+          attrs: {
+            label: {
+              text:
+                'networkId-1\n        峰值带宽：948Mbps\n        峰值并发会话：23948',
+            },
+          },
+          position: { distance: 0.5263157894736842, offset: -90, angle: 0 },
+        },
+      ],
       source: {
         cell: '2ecd7415-0395-424c-b2b3-ba318cd0efde',
         port: '4e8cf490-f653-4d88-b384-ba7507f7a60e',
       },
       target: { cell: '22188ff5-e5da-4ae3-a531-b5a6f3cbc429', port: 't1' },
-      networkId: 'networkId-1',
-      labels: ['networkId-1'],
     },
     {
       shape: 'edge',
@@ -74,10 +84,19 @@ const graphData = {
       id: '6cf22457-c320-4af3-8594-6ed4af59bd0a',
       router: { name: 'manhattan' },
       zIndex: 0,
+      networkId: 'networkId-2',
+      labels: [
+        {
+          attrs: {
+            label: {
+              text:
+                'networkId-2\n        峰值带宽：948Mbps\n        峰值并发会话：23948',
+            },
+          },
+        },
+      ],
       source: { cell: '43918a83-3898-42c3-a902-7bfa8d5bfe82', port: 'l1' },
       target: { cell: '04e006d5-1d26-484c-8c27-173e48202a8e', port: 'r1' },
-      networkId: 'networkId-2',
-      labels: ['networkId-2'],
     },
     {
       shape: 'edge',
@@ -94,9 +113,9 @@ const graphData = {
       id: '368f9e24-3dbf-4940-a1de-3a00d114a97b',
       router: { name: 'manhattan' },
       zIndex: 0,
+      connector: { name: 'rounded' },
       source: { cell: '21832e94-40b1-47b2-ae66-ef80562b2f83', port: 't1' },
       target: { cell: '94141723-b7f7-4425-8160-8ebb917dc30c', port: 'r1' },
-      connector: { name: 'rounded' },
     },
     {
       shape: 'edge',
@@ -104,9 +123,9 @@ const graphData = {
       id: '4a193239-33fc-4410-a184-30cd3591b0ac',
       router: { name: 'manhattan' },
       zIndex: 0,
+      connector: { name: 'rounded' },
       source: { cell: '21832e94-40b1-47b2-ae66-ef80562b2f83', port: 'b1' },
       target: { cell: 'ea917f11-f5c7-46a0-93d9-48e4ffdff0fa', port: 'r1' },
-      connector: { name: 'rounded' },
     },
     {
       position: { x: 600, y: 30 },
