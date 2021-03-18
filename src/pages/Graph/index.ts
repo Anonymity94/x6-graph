@@ -6,7 +6,7 @@ import pcIcon from './icons/pc.png';
 import routerIcon from './icons/router.png';
 import serverIcon from './icons/server.png';
 import switchIcon from './icons/switch.png';
-import TooltipTool from '../components/TooltipTool';
+import TooltipTool from './components/TooltipTool';
 import './shape';
 
 import styles from './style.less';
@@ -396,12 +396,12 @@ export default class FlowGraph {
       this.showPorts(ports, false);
     });
 
-    graph.on('node:collapse', ({ node, e }) => {
+    graph.on('node:collapse', ({ node, e }: any) => {
       e.stopPropagation();
       node.toggleCollapse();
       const collapsed = node.isCollapsed();
       const cells = node.getDescendants();
-      cells.forEach((n) => {
+      cells.forEach((n: any) => {
         if (collapsed) {
           n.hide();
         } else {

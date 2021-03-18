@@ -1,4 +1,4 @@
-# x6-graph-draw
+# x6-graph
 
 依托 `X6` 图编辑引擎实现网络拓扑
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Toolbar } from '@antv/x6-react-components';
-import FlowGraph from '../../Graph';
+import FlowGraph from '../..';
 import { DataUri } from '@antv/x6';
 import {
   ClearOutlined,

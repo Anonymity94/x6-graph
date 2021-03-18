@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { GithubOutlined } from '@ant-design/icons';
+import React, { useEffect, useState } from 'react';
 import FlowGraph from './Graph';
-import ToolBar from './components/ToolBar';
-import ConfigPanel from './components/ConfigPanel';
-import '../reset.less';
+import ConfigPanel from './Graph/components/ConfigPanel';
+import ToolBar from './Graph/components/ToolBar';
+
 import '../global.css';
+import '../reset.less';
 import styles from './index.less';
 
 export default function () {

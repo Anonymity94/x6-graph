@@ -9,9 +9,10 @@ export interface TooltipToolOptions extends ToolsView.ToolItem.Options {
 
 class TooltipTool extends ToolsView.ToolItem<EdgeView, TooltipToolOptions> {
   private delay = 100;
-  private timer: number;
+  private timer: number = 0;
+  // @ts-ignore
   private knob: HTMLDivElement;
-  private tooltipVisible: boolean;
+  private tooltipVisible: boolean = false;
 
   render() {
     super.render();

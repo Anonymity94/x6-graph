@@ -1,14 +1,21 @@
 {
   "private": true,
-  "name": "@antv/x6-app-draw",
+  "name": "x6-graph",
   "version": "1.1.4",
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
+    "deploy": "bash deploy.sh",
     "lint": "yarn lint:ts",
     "lint:ts": "tslint -c tslint.json -p tsconfig.json --fix",
     "precommit": "lint-staged"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:Anonymity94/x6-graph.git"
+  },
+  "homepage": "http://anonymity94.github.io/x6-graph",
+  "author": "1176989591@qq.com",
   "dependencies": {
     "@antv/x6": "^1.13.4",
     "@antv/x6-react-components": "^1.1.1",
